@@ -169,7 +169,7 @@
 
   <header>
     <div class="logo">
-      <img src="logo.png" alt="Logo Excelencia Contable" class="h-40 md:h-40 lg:h-40 w-auto">
+    <img src="logo.png" alt="Logo Excelencia Contable" class="h-40 md:h-40 lg:h-40 w-auto">
     </div>
     <nav>
       <a href="#">Inicio</a>
@@ -221,7 +221,7 @@
       const email = form.email.value.trim();
       const mensaje = form.mensaje.value.trim();
 
-      const telefono = "50375581068"; // Reemplaza con tu número real
+      const telefono = "50375581068"; // Número de WhatsApp
       const texto = Hola, soy ${nombre}. Mi correo es ${email}. Quisiera contactarlos:\n\n${mensaje};
       const url = https://wa.me/${telefono}?text=${encodeURIComponent(texto)};
 
