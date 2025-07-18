@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Excelencia Contable</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1e5963;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #1e5963;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 30px;
+    }
+
+    .logo img {
+      height: 60px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px;
+    }
+
+    nav a:hover {
+      color: #a5f0c5;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background-color: #26717c;
+    }
+
+    .hero h1 {
+      font-size: 2.8em;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .service {
+      background-color: #2e7d89;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .service h3 {
+      margin-bottom: 10px;
+      color: #a5f0c5;
+    }
+
+    form {
+      background-color: #2e7d89;
+      padding: 30px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    form button {
+      background-color: #1dbd6e;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #159d59;
+    }
+
+    footer {
+      background-color: #1b4b53;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      text-decoration: none;
+      z-index: 1000;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .logo img {
+        height: 50px;
+        margin-bottom: 10px;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      .hero h1 {
+        font-size: 2em;
+      }
+
+      .hero p {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo Excelencia Contable">
+    </div>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Bienvenido a Excelencia Contable</h1>
+    <p>Tu aliado estratégico en servicios contables, fiscales y financieros con la más alta calidad y compromiso.</p>
+  </section>
+
+  <section class="section" id="servicios">
+    <h2 style="text-align: center;">Nuestros Servicios</h2>
+    <div class="services">
+      <div class="service">
+        <h3>Contabilidad General</h3>
+        <p>Registro y análisis de operaciones financieras para tu negocio.</p>
+      </div>
+      <div class="service">
+        <h3>Asesoría Fiscal</h3>
+        <p>Optimización de impuestos y cumplimiento normativo.</p>
+      </div>
+      <div class="service">
+        <h3>Nómina y Seguridad Social</h3>
+        <p>Gestión eficiente de tu personal y obligaciones patronales.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contacto">
+    <h2 style="text-align: center;">Contáctanos</h2>
+    <form action="#" method="post">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo electrónico" required>
+      <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Excelencia Contable. Todos los derechos reservados.
+  </footer>
+
+  <a href="https://wa.me/5211234567890" target="_blank" class="whatsapp" title="Escríbenos por WhatsApp">
+    🟢
+  </a>
+
+</body>
+</html>
