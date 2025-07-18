@@ -203,14 +203,17 @@
 
   <section class="section" id="contacto">
     <h2 style="text-align: center;">Contáctanos</h2>
-    <form onsubmit="enviarMensajeWhatsApp(); return false;">
-      <input type="text" name="nombre" placeholder="Tu nombre" required>
-      <input type="email" name="email" placeholder="Tu correo electrónico" required>
-      <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
-      <button type="submit">Enviar mensaje</button>
-    </form>
-    <script>
-  function enviarMensajeWhatsApp() {
+    <form id="formulario-contacto">
+  <input type="text" name="nombre" placeholder="Tu nombre" required>
+  <input type="email" name="email" placeholder="Tu correo electrónico" required>
+  <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+  <button type="submit">Enviar mensaje</button>
+</form>
+
+<script>
+  document.getElementById("formulario-contacto").addEventListener("submit", function(event) {
+    event.preventDefault(); // Previene el comportamiento por defecto
+
     const nombre = document.querySelector('[name="nombre"]').value;
     const email = document.querySelector('[name="email"]').value;
     const mensaje = document.querySelector('[name="mensaje"]').value;
@@ -220,7 +223,7 @@
 
     const url = https://wa.me/${telefono}?text=${encodeURIComponent(texto)};
     window.open(url, '_blank');
-  }
+  });
 </script>
   </section>
 
