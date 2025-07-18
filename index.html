@@ -203,7 +203,7 @@
 
   <section class="section" id="contacto">
     <h2 style="text-align: center;">Contáctanos</h2>
-    <form id="formulario-contacto" action="javascript:void(0);">
+    <form id="formulario-contacto">
   <input type="text" name="nombre" placeholder="Tu nombre" required>
   <input type="email" name="email" placeholder="Tu correo electrónico" required>
   <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
@@ -211,18 +211,21 @@
 </form>
 
 <script>
-  document.getElementById("formulario-contacto").addEventListener("submit", function(event) {
-    event.preventDefault(); // Previene el comportamiento por defecto
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("formulario-contacto");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // ⚠ Previene que se recargue la página
 
-    const nombre = document.querySelector('[name="nombre"]').value;
-    const email = document.querySelector('[name="email"]').value;
-    const mensaje = document.querySelector('[name="mensaje"]').value;
+      const nombre = form.nombre.value.trim();
+      const email = form.email.value.trim();
+      const mensaje = form.mensaje.value.trim();
 
-    const telefono = '50375581068'; // Reemplaza con tu número real
-    const texto = Hola, soy ${nombre}. Mi correo es ${email}. Quisiera contactarlos:\n\n${mensaje};
+      const telefono = "50375581068"; // ← CAMBIA este número
+      const texto = Hola, soy ${nombre}. Mi correo es ${email}. Quisiera contactarlos:\n\n${mensaje};
+      const url = https://wa.me/${telefono}?text=${encodeURIComponent(texto)};
 
-    const url = https://wa.me/${telefono}?text=${encodeURIComponent(texto)};
-    window.open(url, '_blank');
+      window.open(url, "_blank");
+    });
   });
 </script>
   </section>
