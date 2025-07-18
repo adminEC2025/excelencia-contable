@@ -213,14 +213,15 @@
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("formulario-contacto");
+
     form.addEventListener("submit", function (e) {
-      e.preventDefault(); // ⚠ Previene que se recargue la página
+      e.preventDefault(); // Previene que se recargue la página
 
       const nombre = form.nombre.value.trim();
       const email = form.email.value.trim();
       const mensaje = form.mensaje.value.trim();
 
-      const telefono = "50375581068"; // ← CAMBIA este número
+      const telefono = "50375581068"; // Reemplaza con tu número real
       const texto = Hola, soy ${nombre}. Mi correo es ${email}. Quisiera contactarlos:\n\n${mensaje};
       const url = https://wa.me/${telefono}?text=${encodeURIComponent(texto)};
 
